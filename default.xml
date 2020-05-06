@@ -19,13 +19,12 @@
            sync-j="4" />
 
   <!-- AOSP Projects -->
-  <project path="external/flex" name="crimsonthunder/flex" remote="github" revision="refs/heads/master"/>
-  <project path="build" name="crimsonthunder/android_build" groups="pdk" remote="github" revision="refs/heads/cm-14.1">
+  <project path="build" name="LineageOS/android_build" groups="pdk">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
   <project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
-  <project path="build/soong" name="crimsonthunder/build_soong" groups="pdk,tradefed" remote="github" revision="refs/heads/nougat-release" >
+  <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" remote="aosp" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
